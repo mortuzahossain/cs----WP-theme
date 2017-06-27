@@ -104,7 +104,10 @@
                 echo "<h4 class = 'worning text-center bg-warning'>Please Fill All The information</h4>";
             } else {
                 $subject = 'User Contact Email From'.get_bloginfo('name');
-                $message = 'Name: '.$name.'\n\nEmail: '.$email.'\n\nWebsite: '.$website.'\n\nAddress: '.'\n\nMessage: '.$message;
+                $message = 'Name: '.$name
+                            ."\r\nEmail: ".$email
+                            ."\r\nWebsite: ".$website
+                            ."\r\nMessage: ".$message;
                 if (mail($to, $subject, $message)) {
                     $message = 'Thanks For Contact Us. We will come back to you soon. Please be with us.';
                     mail($email, $subject, $message);
